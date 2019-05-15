@@ -11,4 +11,4 @@ Employing the perceptronn model with slight variation. Hidden vector is tanh fun
 
 ## Efficient Neural Network:
 During the training process, for every sentence I encountered, I had to create a one hot encoding for it. For a sentence of length N, I had to generate 2 matrices of size N x V. If V = 10,000 there is 10,000 times more data than I started with.
-If my word input is k (numerical representation), the the one hot vector should contain all 0s except a 1 at the kth index. Then multiplying the one hot vector with the weight matrix is same as selecting the kth row from the weight matrix.
+If my word input is k (numerical representation), then the one hot vector should contain all 0s except a 1 at the kth index. Then multiplying the one hot vector with the weight matrix is same as selecting the kth row from the weight matrix.
