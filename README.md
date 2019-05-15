@@ -1,5 +1,5 @@
 # Bigram-based-Language-Model
-Bigram based language model in three separate methodologies without using any libraries for deep learning
+Bigram based language model in three separate methodologies without using any libraries for deep learning. The models are trained on the Brown corpus from the Natural Language Tool-Kit library in python.
 ## Markov Assumption with Add - one smoothing:
 Basically finding the probability of the current word given the last word by simple counting and employing the chain rule of probability i.e. the Bayes' Theorem. Taking into consideration the Markov assumption which states that probability of current word given all the previous words is equivalent to the probability of the current word given the previous one word. To ensure that probabilities add up to one, add-one smoothing is used.
 
