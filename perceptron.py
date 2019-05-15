@@ -104,7 +104,7 @@ if __name__ == "__main__":
             inputs = np.zeros((n - 1, V))
             targets = np.zeros((n - 1, V))
             inputs[np.arange(n - 1), sentence[:n - 1]] = 1
-            targets[np.arange(n - 1), sentence[:n - 1]] = 1
+            targets[np.arange(n - 1), sentence[1:]] = 1
             
             # predictions
             predictions = softmax(inputs.dot(W))
@@ -146,11 +146,11 @@ if __name__ == "__main__":
     
     plt.subplot(1,2,1)
     plt.title("Logistic Model")
-    plt.imshow(softmax(W))
+    plt.imshow(W)
     plt.subplot(1,2,2)
     plt.title("Bigram Probability")
-    plt.imshow(bigram_prob)
+    plt.imshow(W_bigram)
     plt.show()
             
-# Elapsed time:  0:33:24.069930
-# Average Bigram Loss:  0.5097077464074441           
+# Elapsed time:  0:31:48.166314
+# Average Bigram Loss:  4.715087473707792        
