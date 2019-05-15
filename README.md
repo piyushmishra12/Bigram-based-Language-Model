@@ -8,3 +8,7 @@ Employing logistic regression in one neuron. Probability of current word given p
 
 ## Neural Network Model:
 Employing the perceptronn model with slight variation. Hidden vector is tanh function of the dot product of the first weight matrix and input vector. Probability of current word given previous word is the softmax function of the dot product of the second weight matrix and the hidden vector. The optimum weights are calculated using the gradiend descent technique. The enntire architecture and model of the neural network is designed only using numpy and no other library is used for deep learning.
+
+## Efficient Neural Network:
+During the training process, for every sentence I encountered, I had to create a one hot encoding for it. For a sentence of length N, I had to generate 2 matrices of size N x V. If V = 10,000 there is 10,000 times more data than I started with.
+If my word input is k (numerical representation), the the one hot vector should contain all 0s except a 1 at the kth index. Then multiplying the one hot vector with the weight matrix is same as selecting the kth row from the weight matrix.
